@@ -1,0 +1,22 @@
+on :
+push:
+branches:
+- main
+
+jobs:
+deploy-job:
+runs-on: ubuntu-lastest
+steps:
+-name:checkout code
+uses:actions/checkout@v4
+
+-name:Message debut
+run:echo "debut du deploiement"
+
+-name:Afficher le secret
+run:echo"le token est est $ {{secrets.DEPLOY_TOKEN}}"
+
+
+
+-name:Message de fin
+run:echo"deploiement finit  par kenfack azangue chris alane"
